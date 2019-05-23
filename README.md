@@ -2,8 +2,7 @@
 >RunAs theme for Ghost blogging platform, inspired by http://www.creative-tim.com/
 
 ![RunAs theme for Ghost](https://www.creative-tim.com/product/argon-design-system)
-                                                                            Screenshot made with http://magicmockups.com
-
+                                                                            
 ##Introduction
 
 **RunAs** is a landing page theme with few nice features, **scroll indicator**

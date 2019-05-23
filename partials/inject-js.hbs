@@ -1,0 +1,40 @@
+<!--   Core JS Files   -->
+<script type="text/javascript" src="{{asset 'js/core/jquery.min.js'}}"></script>
+<script type="text/javascript" src="{{asset 'js/core/popper.min.js'}}"></script>
+<script type="text/javascript" src="{{asset 'js/core/bootstrap.min.js'}}"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script type="text/javascript" src="{{asset 'js/plugins/bootstrap-switch.js'}}"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script type="text/javascript" src="{{asset 'js/plugins/nouislider.min.js'}}"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script type="text/javascript" src="{{asset 'js/plugins/moment-with-locales.js'}}"></script>
+<script type="text/javascript" src="{{asset 'js/plugins/bootstrap-datepicker.js'}}"></script>
+<script type="text/javascript" src="{{asset 'js/plugins/jquery-ui.custom.min.js'}}"></script>
+{{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
+<script type="text/javascript" src="{{asset "js/plugins/jquery.fitvids.js"}}"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script type="text/javascript" src="{{asset 'js/paper-kit.js'}}"></script>
+{{!-- Lazy loading images, will be only done on the index page, author page and tag page --}}
+{{!-- All other pages will load images normally --}}
+{{!-- Lazy loading configuration --}}
+<script type="text/javascript" src="{{asset 'js/jquery.lazy.min.js'}}"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.lazy').lazy({
+			effect: "fadeIn",
+			effectTime: 300,
+			threshold: 0
+		});
+	});
+</script>
+
+<script>
+			var images = document.querySelectorAll('.kg-gallery-image img');
+			images.forEach(function (image) {
+					var container = image.closest('.kg-gallery-image');
+					var width = image.attributes.width.value;
+					var height = image.attributes.height.value;
+					var ratio = width / height;
+					container.style.flex = ratio + ' 1 0%';
+			})
+</script>

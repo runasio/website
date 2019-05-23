@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+	{{!-- Document Settings --}}
+	<meta charset="UTF-8">
+	<meta name="HandheldFriendly" content="True">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	{{!-- Base Meta --}}
+	<title>{{meta_title}}</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+	{{!-- Styles, Fonts and Icons --}}
+  <link rel="stylesheet" href="{{asset 'css/bootstrap.min.css'}}">
+  <link rel="stylesheet" href="{{asset 'css/paper-kit.css'}}">
+  <link rel="stylesheet" href="{{asset 'css/pe-icon-7-stroke.css'}}">
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  {{!-- This tag outputs SEO meta structured data and other important settings --}}
+    {{ghost_head}}
+</head>
+
+<body class="landing-page sidebar-collapse">
+	{{!-- This tag will output the navigation bar --}}
+	{{> "navigation-home"}}
+	{{!-- This tag will output the background home --}}
+	{{> "background-home"}}
+	{{!-- This tag will output the product home --}}
+	{{> "product-home"}}
+	{{!-- This tag will output the team home --}}
+	{{> "team-home"}}
+	{{!-- This tag will output the testimonial home --}}
+	{{> "testimonial-home"}}
+	{{!-- This tag will output the subscribe --}}
+	{{> "subscribe-home"}}
+	{{!-- This tag will output the footer --}}
+	{{> "footer"}}
+	{{!-- This tag will output the inject JS scripts --}}
+	{{> "inject-js"}}
+
+	{{!-- Ghost outputs important scripts and data with this tag --}}
+	{{ghost_foot}}
+</body>
+</html>

@@ -1,0 +1,101 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+
+<header class="site-header outer">
+    <div class="inner">
+        {{> "site-nav"}}
+    </div>
+</header>
+
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+
+<div class="section-container">
+    <div class="container">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <h1>Pricing</h1>
+                </div>
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <p>
+                      There’s something for everyone, from individuals to agencies.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pricing-card pricing-primary">
+                    <h3>Personal</h3>
+                    <h6 class="price">18 <span>$/MO</span></h6>
+                </div>
+                <div class="pricing-features">
+                    <ul class="features">
+                        <li>Gravida arcu ac tortor dignissim convallis aenean</li>
+                        <li>Gravida arcu ac tortor dignissim convallis aenean</li>
+                        <li>Gravida arcu ac tortor dignissim</li>
+                    </ul>
+
+                    <a href="/#subscribe-section" class="btn btn-primary" title="">Subscribe</a>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card pricing-info">
+                    <h3>Professional</h3>
+                    <h6 class="price"> 28 <span>$/MO</span></h6>
+                </div>
+                <div class="pricing-features">
+                    <ul class="features">
+                        <li>Gravida arcu ac tortor dignissim convallis aenean</li>
+                        <li>Gravida arcu ac tortor dignissim convallis aenean</li>
+                        <li>Gravida arcu ac tortor dignissim</li>
+                        <li>Gravida arcu ac tortor dignissim convallis aenean</li>
+                    </ul>
+
+                    <a href="contact.html" class="btn btn-primary" title="">Subscribe</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card pricing-secondary">
+                    <h3>Business</h3>
+                    <h6 class="price">48 <span>$/MO</span></h6>
+                </div>
+                <div class="pricing-features">
+                    <ul class="features">
+                        <li>Gravida arcu ac tortor dignissim convallis aenean</li>
+                        <li>Gravida arcu ac tortor dignissim convallis aenean</li>
+                        <li>Gravida arcu ac tortor dignissim</li>
+                        <li>Gravida arcu ac tortor dignissim convallis aenean</li>
+                        <li>Gravida arcu ac tortor dignissim</li>
+                    </ul>
+                    <a href="/#subscribe-section" class="btn btn-primary" title="">Subscribe</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</br>
+{{!-- This tag will output the subscribe --}}
+{{> "subscribe-home"}}
+
+{{!-- This tag will output the inject JS scripts --}}
+{{> "inject-js"}}
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navActivePage();
+  });
+</script>
+
+<script type="text/javascript" src="{{asset 'js/plugins/main.41beeca9.js'}}"></script>
+</body>
+
+</html>

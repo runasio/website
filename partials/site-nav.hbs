@@ -1,0 +1,48 @@
+<nav class="site-nav">
+    <div class="site-nav-left">
+        {{^is "home"}}
+            {{#if @site.logo}}
+                <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+            {{else}}
+                <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
+            {{/if}}
+        {{/is}}
+        {{#if @site.navigation}}
+            {{navigation}}
+        {{/if}}
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+
+          <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="{{twitter_url @site.twitter}}" target="_blank">
+            <i class="fa fa-twitter"></i>
+            <p class="d-lg-none">Twitter</p>
+          </a>
+          <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="{{facebook_url @site.facebook}}" target="_blank">
+            <i class="fa fa-facebook-square"></i>
+            <p class="d-lg-none">Facebook</p>
+          </a>
+          <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/runasio/" target="_blank">
+            <i class="fa fa-instagram"></i>
+            <p class="d-lg-none">Instagram</p>
+          </a>
+          <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://github.com/runasio" target="_blank">
+            <i class="fa fa-github"></i>
+            <p class="d-lg-none">GitHub</p>
+          </a>
+          <a class="nav-link" rel="tooltip" title="RunAs RSS" data-placement="bottom" href="https://feedly.com/i/subscription/feed/{{@site.url}}/blog/rss/" target="_blank" rel="noopener">
+            <i class="fa fa-rss"></i>
+            <p class="d-lg-none">RSS</p>
+          </a>
+          <a class="nav-link" rel="tooltip" title="RunAs France" data-placement="bottom" href="https://www.runas.fr" rel="noopener">
+            <i class="fa fa-globe"></i>
+            <p class="d-lg-none">FR</p>
+          </a>      
+        </div>
+        {{#if @labs.subscribers}}
+            <a href="/#subscribe-section" class="btn btn-danger btn-round">Sign in</a>
+        {{else}}
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+        {{/if}}
+    </div>
+</nav>

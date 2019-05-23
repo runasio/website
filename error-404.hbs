@@ -1,0 +1,55 @@
+{{!--
+This error template is used for all 404 errors, which might occur on your site.
+It's a good idea to keep this template as minimal as possible in terms of both file size and complexity.
+--}}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{!-- Styles, Fonts and Icons --}}
+    <link rel="stylesheet" href="{{asset 'css/bootstrap.min.css'}}">
+    <link rel="stylesheet" href="{{asset 'css/paper-kit.css'}}">
+    <link rel="stylesheet" href="{{asset 'css/pe-icon-7-stroke.css'}}">
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    {{!-- This tag outputs SEO meta structured data and other important settings --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    {{ghost_head}}
+
+</head>
+<body class="error-template">
+    <div class="site-wrapper">
+
+        <main id="site-main" class="site-main outer">
+            <div class="inner">
+
+                <section class="error-message">
+                    <h1 class="error-code">{{code}}</h1>
+                    <p class="error-description">{{message}}</p>
+                    <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
+                </section>
+            </div>
+        </main>
+
+        {{#get "posts" limit="3"}}
+        <aside class="outer">
+            <div class="inner">
+                <div class="post-feed">
+                    {{#foreach posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                </div>
+            </div>
+        </aside>
+        {{/get}}
+        {{!-- The footer at the very bottom of the screen --}}
+        {{> "footer"}}
+    </div>
+</body>
+</html>

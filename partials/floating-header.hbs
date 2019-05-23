@@ -1,0 +1,51 @@
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="{{@site.url}}">
+            {{#if @site.icon}}
+                <img src="{{img_url @site.icon size="xxs"}}" alt="{{@site.title}} icon" />
+            {{/if}}
+            <span>{{@site.title}}</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">{{title}}</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this {{> "icons/point"}}</div>
+        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="{{twitter_url @site.twitter}}" target="_blank">
+          <i class="fa fa-twitter"></i>
+          <p class="d-lg-none">Twitter</p>
+        </a>
+        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="{{facebook_url @site.facebook}}" target="_blank">
+          <i class="fa fa-facebook-square"></i>
+          <p class="d-lg-none">Facebook</p>
+        </a>
+        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/runasio/" target="_blank">
+          <i class="fa fa-instagram"></i>
+          <p class="d-lg-none">Instagram</p>
+        </a>
+        <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://github.com/runasio" target="_blank">
+          <i class="fa fa-github"></i>
+          <p class="d-lg-none">GitHub</p>
+        </a>
+        <a class="nav-link" rel="tooltip" title="RunAs RSS" data-placement="bottom" href="https://feedly.com/i/subscription/feed/{{@site.url}}/blog/rss/" target="_blank" rel="noopener">
+          <i class="fa fa-rss"></i>
+          <p class="d-lg-none">RSS</p>
+        </a>
+        <a class="nav-link" rel="tooltip" title="RunAs France" data-placement="bottom" href="https://www.runas.fr" rel="noopener">
+          <i class="fa fa-globe"></i>
+          <p class="d-lg-none">FR</p>
+        </a>
+
+        <a href="/#subscribe-section" class="btn btn-danger btn-round">Sign in</a>
+
+
+
+
+
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
