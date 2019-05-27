@@ -8,9 +8,9 @@
 				{{!-- Only output subscribe form if the subscribers option is enabled in admin --}}
 				{{#if @labs.subscribers}}
 				<section id="subscribe-section" class="contact-form text-center" >
-					<h2 class="title">Keep in Touch?</h3>
-					<p class="card-description" style="color:white";>Get the latest news delivered to your inbox.</p>
-					{{subscribe_form placeholder="Your email address" form_class="subscribe-form" input_class="form-control text-center subscribe-input" button_class="btn btn-danger btn-lg btn-fill"}}
+					<h2 class="title">{{t "Keep in Touch?"}}</h3>
+					<p class="card-description" style="color:white";>{{t "Get the latest news delivered to your inbox."}}</p>
+					{{subscribe_form placeholder=(t "Your email address") form_class="subscribe-form" input_class="form-control text-center subscribe-input" button_class="btn btn-danger btn-lg btn-fill"}}
 				</section>
 				{{/if}}
 

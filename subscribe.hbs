@@ -1,6 +1,6 @@
 <!doctype html>
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if (gte IE 9)| IEMobile |!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="{{@site.lang}}"><![endif]-->
+<!--[if (gte IE 9)| IEMobile |!(IE)]><!--><html class="no-js" lang="{{@site.lang}}"><!--<![endif]-->
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -43,7 +43,7 @@
                                     </g>
                                 </g>
                             </svg>
-                            Back to RunAs Website
+                            {{t "Back to RunAs Website"}}
                         </a>
                     </nav>
                 </header>
@@ -51,24 +51,24 @@
                     <section class="gh-flow-content">
                         {{^if success}}
                             <header>
-                                <h1>Subscribe to {{@site.title}} latest news</h1>
+                                <h1>{{t "Subscribe to RunAs latest news"}}</h1>
                             </header>
 
                             {{subscribe_form
                                 form_class="subscribe-form"
                                 input_class="form-control text-center subscribe-input"
                                 button_class="btn btn-danger btn-lg btn-fill"
-                                placeholder="Your email address"
+                                placeholder=(t "Your email address")
                                 autofocus="true"
                             }}
                         {{else}}
                             <header>
-                                <h1>Subscribed!</h1>
+                                <h1>{{t "Subscribed!"}}</h1>
                             </header>
 
                             <p>
-                                You've successfully subscribed to <em>{{@site.title}}</em>
-                                with the email address <em>{{email}}</em>.
+                                {{t "You've successfully subscribed to"}} <em>{{@site.title}}</em>
+                                {{t "with the email address"}} <em>{{email}}</em>.
                             </p>
                         {{/if}}
                     </section>
