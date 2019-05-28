@@ -5,7 +5,7 @@ into the {body} of the default.hbs template --}}
 
 <header class="site-header outer">
     <div class="inner">
-        {{> "navigation-home"}}
+        {{> "site-nav"}}
     </div>
 </header>
 
@@ -130,6 +130,9 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </aside>
+
+{{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
+{{> floating-header}}
 
 {{/post}}
 

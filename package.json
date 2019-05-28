@@ -3,7 +3,7 @@
     "description": "Bootstrap 4 Now UI Design by Creative Team for RunAs.io",
     "homepage": "https://www.runas.io",
     "license": "Creative Tim License <www.creative-tim.com/license>",
-    "version": "0.2",
+    "version": "1.0.1",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
